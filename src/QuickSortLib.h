@@ -32,7 +32,7 @@ void QuickSort<T>::SortAscending(T* data, const size_t left, const size_t right)
 	size_t rightIndex = right;
 	T tmpItem;
 
-	int pivot = data[(left + right) / 2];
+	T pivot = data[(left + right) / 2];  // CHANGED FROM INT TO T IN ORDER TO EQUALIZE TYPES AND CORRECT ISSUES WITH OTHER DATATYPES
 	while (leftIndex <= rightIndex)
 	{
 		while (data[leftIndex]<pivot) leftIndex++;
@@ -60,7 +60,7 @@ void QuickSort<T>::SortDescencing(T* data, const size_t left, const size_t right
 	size_t rightIndex = right;
 	T tmpItem;
 
-	int pivot = data[(left + right) / 2];
+	T pivot = data[(left + right) / 2]; // CHANGED FROM INT TO T IN ORDER TO EQUALIZE TYPES AND CORRECT ISSUES WITH OTHER DATATYPES
 	while (leftIndex <= rightIndex)
 	{
 		while (data[leftIndex]>pivot) leftIndex++;
